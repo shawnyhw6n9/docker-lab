@@ -1,4 +1,4 @@
-docker run -d -it --rm --name test1 -p 8080:80 nginx:latest
+docker run -d -it --rm --name test1 -p 8080:80 nginx:stable-alpine
 
 docker build -t my/image3:myTag -f ./Dockerfile3 . 
 docker run -it --rm -p 80 my/image3:myTag
