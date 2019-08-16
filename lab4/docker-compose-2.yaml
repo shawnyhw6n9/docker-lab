@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: shawnyhw6n9/custom-nginx:dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/etc/nginx/conf.d
+  ap:
+    image: "jetty:jre8-alpine"
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./ap:/var/lib/jetty/webapps
