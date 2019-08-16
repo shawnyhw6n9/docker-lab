@@ -1,1 +1,1 @@
-curl http://localhost:8081/hello && curl http://localhost:8080/helloworld
+curl http://localhost:8081/ && curl http://localhost:8080/helloworld
