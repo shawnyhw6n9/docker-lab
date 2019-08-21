@@ -1,7 +1,7 @@
 docker run -d -it --rm --name test1 -p 8080:80 nginx:stable-alpine
 
-docker build -t my/image3:myTag -f ./Dockerfile3 . 
-docker run -it --rm -p 80 my/image3:myTag
+docker build -t my/image4:myTag -f ./Dockerfile4 . 
+docker run -it --rm -p 80 my/image4:myTag
 docker ps
 
 docker run -it --rm --name test2 --net isolated_nw -h test2 busybox sh
