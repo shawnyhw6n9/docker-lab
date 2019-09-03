@@ -1,4 +1,6 @@
 #下載 ROOT.war
+docker network ls
+# docker network create --driver bridge isolated_nw
 
 docker run -d -it --name ap -p 8081:8080 --net isolated_nw -h ap -v ~/docker-lab/lab3/exam1/ap:/var/lib/jetty/webapps jetty:jre8-alpine
 
