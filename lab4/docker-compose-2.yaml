@@ -6,9 +6,18 @@ services:
       - "8080:80"
     volumes:
       - ./web:/etc/nginx/conf.d
+    networks:
+      extnetwork:
   ap:
     image: "jetty:jre8-alpine"
     ports:
       - "8081:8080"
     volumes:
       - ./ap:/var/lib/jetty/webapps
+    networks:
+      extnetwork:
+networks:
+    extnetwork:
+      ipam:
+         config:
+         - subnet: 172.77.0.0/16
